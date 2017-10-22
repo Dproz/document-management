@@ -15,5 +15,5 @@ spring:
                 tags: profile=${spring.profiles.active}, version=${info.project.version}
             config:
                 fail-fast: false
-                format: files
+                format: FILES
                 profile-separator: '-'
