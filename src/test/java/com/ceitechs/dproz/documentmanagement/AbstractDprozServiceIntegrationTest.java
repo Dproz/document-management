@@ -10,6 +10,7 @@ import com.ceitechs.dproz.shared.security.SpringSecurityAuditorAware;
 import com.ceitechs.dproz.shared.security.oauth2.UaaSignatureVerifierClient;
 import org.junit.Ignore;
 import org.junit.runner.RunWith;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
