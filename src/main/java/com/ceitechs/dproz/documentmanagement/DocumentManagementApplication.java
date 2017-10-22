@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication(scanBasePackages = "com.ceitechs.dproz")
 @EnableDiscoveryClient
-public class SampleAppApplication {
+public class DocumentManagementApplication {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(SampleAppApplication.class, args);
+		SpringApplication.run(DocumentManagementApplication.class, args);
 	}
 }
