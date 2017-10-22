@@ -38,7 +38,7 @@ public class UserController {
 	public ResponseEntity<User> addUser(@RequestBody User user){	
 		User userAdded = userService.addUser(user);
 		 return ResponseEntity.ok()
-		            .headers(HeaderUtil.createEntityUpdateAlert("USER", userAdded.getId().toString()))
+		            .headers(HeaderUtil.createEntityUpdateAlert("USER", userAdded.getUserReferenceId().toString()))
 		            .body(userAdded);
 	}
 

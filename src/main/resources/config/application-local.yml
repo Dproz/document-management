@@ -15,6 +15,15 @@ spring:
         locator:
             discovery:
                 enabled: true
+documentmanagement:
+    db:
+        host: localhost:27017
+        name: dproz-dev
+        user: rwUser
+        password: rwUserPass
+    magickey: 5rGXHCU2yoGTn600Gz9i5A==
+    secretkey: 9xinRhvCzMO10uBnmFa0IqSnQFTuNk9JjFlKxkHHOdYFRFJTagTG8wKs5i4X+dQK
+    accesskey: AKIAJLBAJNUMLHZIUZEA
 # LOGGING CONFIGURATION
 logging:
     config: classpath:log4j2-local.yaml

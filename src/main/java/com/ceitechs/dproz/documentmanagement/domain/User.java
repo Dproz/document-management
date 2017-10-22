@@ -17,7 +17,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = -1353329736543106750L;
 
 	@Id
-	private String id;
+	private String userReferenceId;
 
 	@NotNull
 	@Field("name")
