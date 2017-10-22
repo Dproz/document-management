@@ -2,12 +2,11 @@
 # Spring Cloud Consul Config bootstrap configuration for the "dev" profile
 # In prod profile, properties will be overwriten by the ones defined in bootstrap-prod.yml
 # ===================================================================
-
 spring:
     application:
         name: document-management
     profiles:
-      active: local    
+        active: local
     cloud:
         consul:
             discovery:
@@ -15,6 +14,6 @@ spring:
                 healthCheckInterval: 120s
                 tags: profile=${spring.profiles.active}, version=${info.project.version}
             config:
-                fail-fast: false # if not in "prod" profile, do not force to use Spring Cloud Config
+                fail-fast: false
                 format: files
-                profile-separator: "-"
+                profile-separator: '-'
