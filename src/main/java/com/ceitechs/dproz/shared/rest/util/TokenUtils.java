@@ -16,6 +16,7 @@ public class TokenUtils {
         // TODO: need implementation on how to split the authToken
 
         //String[] parts = authToken.split(":");
+        
         return new String("vctrowino@yahoo.com"); 
 }
 
