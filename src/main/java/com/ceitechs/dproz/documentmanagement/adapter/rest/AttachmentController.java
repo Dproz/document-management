@@ -37,7 +37,7 @@ import com.ceitechs.dproz.shared.utils.DprozUtility;
  *
  */
 @RestController
-@RequestMapping(value = "/attachments")
+@RequestMapping(value = "/api/dproz/attachments")
 public class AttachmentController {
 	@Autowired
 	private AttachmentService attachmentService;
