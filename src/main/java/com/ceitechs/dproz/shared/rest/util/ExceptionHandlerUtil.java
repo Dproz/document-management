@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 
-import com.ceitechs.dproz.documentmanagement.adapter.rest.resources.DprozErrorResponse;
+import com.ceitechs.dproz.documentmanagement.adapter.rest.resources.DocumentManagementErrorResponse;
 
 /**
  * @author vowino
@@ -27,11 +27,11 @@ public class ExceptionHandlerUtil {
 	}
 	
 	public static ResponseEntity<?> handleExcepetion(HttpStatus status, BindingResult result, Exception ex) {
-		DprozErrorResponse errorResponse = null;
+		DocumentManagementErrorResponse errorResponse = null;
 		switch (Integer.valueOf(status.value())) {
 		// Bad request error: 400
 		case 400:
-			errorResponse = new DprozErrorResponse(status.getReasonPhrase(), ERRORS_TAGS.VALIDATION_ERROR.name(),
+			errorResponse = new DocumentManagementErrorResponse(status.getReasonPhrase(), ERRORS_TAGS.VALIDATION_ERROR.name(),
 					status.value());
 			if(result != null && result.hasErrors()) {
 				errorResponse.addErrorMessages(result.getAllErrors().stream()
@@ -45,7 +45,7 @@ public class ExceptionHandlerUtil {
 			break;
 		// Internal server error: 500
 		default:
-			errorResponse = new DprozErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), 
+			errorResponse = new DocumentManagementErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), 
 					ERRORS_TAGS.INTERNAL_SERVER_ERROR.name(), HttpStatus.INTERNAL_SERVER_ERROR.value());
             errorResponse.setDeveloperMessage(ex.getMessage());
             logger.error(ex.getMessage(), ex.getCause());

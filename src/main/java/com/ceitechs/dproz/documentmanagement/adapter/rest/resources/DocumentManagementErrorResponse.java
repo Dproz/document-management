@@ -17,7 +17,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class DprozErrorResponse {
+public class DocumentManagementErrorResponse {
 	private String title;
 	private int status;
 	private String detail;
@@ -31,7 +31,7 @@ public class DprozErrorResponse {
 	 * @param statusLabel
 	 * @param statusCode
 	 */
-	public DprozErrorResponse(String statusPhrase, String statusLabel, int statusCode) {
+	public DocumentManagementErrorResponse(String statusPhrase, String statusLabel, int statusCode) {
 		this.title = statusLabel;
 		this.detail = statusPhrase;
 		this.developerMessage = statusPhrase;
