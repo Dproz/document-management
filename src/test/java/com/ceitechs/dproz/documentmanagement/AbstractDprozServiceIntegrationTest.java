@@ -1,16 +1,9 @@
 package com.ceitechs.dproz.documentmanagement;
 
-import com.ceitechs.dproz.documentmanagement.config.ApplicationProperties;
 import com.ceitechs.dproz.documentmanagement.config.DatabaseConfiguration;
-import com.ceitechs.dproz.documentmanagement.config.MicroserviceSecurityConfiguration;
 import com.ceitechs.dproz.documentmanagement.config.ServiceConfiguration;
-import com.ceitechs.dproz.shared.api.client.OAuth2InterceptedFeignConfiguration;
-import com.ceitechs.dproz.shared.config.oauth2.OAuth2Properties;
-import com.ceitechs.dproz.shared.security.SpringSecurityAuditorAware;
-import com.ceitechs.dproz.shared.security.oauth2.UaaSignatureVerifierClient;
 import org.junit.Ignore;
 import org.junit.runner.RunWith;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
